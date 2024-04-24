@@ -1,0 +1,300 @@
+:root{
+    --darkmode_text: white;
+    --lightmode_text: #4E4E4E;
+    --darkmode_background: black;
+    --lightmode_background: #F4F4F4;
+    --theme_color: #14425D;
+    --hover_color: #2f566d;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+/* Ẩn/hiện text */
+
+.collapse[aria-expanded="false"]{
+    display: block;
+    height: 200px !important;
+    overflow: hidden;
+}
+
+.collapsing[aria-expanded="false"]{
+    height: 200px !important;
+}
+
+
+/* Header-css */
+.header{
+    height: 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--lightmode_text);
+}
+
+.header>div{
+    display: inline-block;
+    line-height: 50px;
+    font-size: 24px;
+}
+
+.header .header-title{
+    border-bottom: 1px solid var(--theme_color);
+    text-transform: uppercase;
+    color: var(--lightmode_text);
+}
+
+/* Navigation-bar-css */
+
+#nav{
+    background-color: var(--theme_color);
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#nav .container>div{
+    display: inline-block;
+    
+}
+
+#nav .container .logo{
+    color: white;
+    font-size: 24px;
+    font-family: "Fantasy";
+    margin-right: 36px;
+}
+
+.nav-button-wrapper{
+    display: inline-block;
+    position: relative;
+}
+
+.nav-button{
+    background-color: var(--theme_color);
+    color: white;
+    padding: 0 10px;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 50px;
+}
+
+.nav-list{
+    background-color: var(--hover_color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 10001;
+}
+
+.dropdown-list{
+    list-style: none;
+    padding: 4px 0;
+    min-width: 160px;
+    display: none;
+    text-decoration: none;
+    z-index: 10001;
+}
+
+.dropdown-list li{
+    position: relative;
+}
+
+.dropdown-list li a{
+    color: white;
+    display: inline-block;
+    line-height: 30px;
+    text-decoration: none;
+    padding: 4px;
+}
+
+.dropdown-list li i{
+    margin: 0 6px;
+}
+
+.dropdown-list li input{
+    position: absolute;
+    right: 12px;
+    top:auto;
+    bottom: auto;
+    cursor: pointer;
+}
+
+.dropdown-list li:hover{
+    background-color: var(--theme_color);
+    cursor: pointer;
+    
+}
+
+#nav .search-box{
+    background-color: white;
+    border-radius: 2px;
+    margin-left: 72px;
+}
+
+#nav .search-box div{
+    display: inline-block;
+}
+
+#nav .search-box input{
+    height: 30px;
+    border: #ccc solid 1px ;
+    border: none;
+    padding: 5px;
+}
+
+#nav .search-box input:focus{
+    outline: none;
+}
+
+#nav .search-box .search-button{
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-left: #ccc solid 1px ;
+}
+
+#nav .search-box .search-button a{
+    color: black;
+    display: inline-block;
+}
+
+#nav .user-box{
+    position: absolute;
+    right: 150px;
+}
+
+.nav-button:hover{
+    background-color: var(--hover_color);
+}
+
+.nav-button-wrapper:hover .dropdown-list{
+    display: block;
+}
+
+#nav .search-box .search-button:hover a{
+    color: var(--hover_color);;
+}
+
+
+/* CSS tạo các cột */
+
+.story .container>div{
+    display: inline-block;
+    vertical-align:top;
+}
+
+.story .story-main{
+    width: 74%;
+}
+
+.story .story-side{
+    width: 24%;
+}
+
+
+/* CSS cho mô tả truyện */
+
+.story .story-main-wrapper{
+    position: relative;
+    padding: 24px 0px;
+   margin-right: 16px;
+    border-top: rgb(241, 241, 241) solid 1px ;
+}
+
+.story .story-main-wrapper>div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.story .story-main-wrapper .story-info{
+    width: 33%;
+}
+
+.story .story-desc .story-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+.story .story-desc .story-rating{
+    padding: 12px 0;
+    text-align: center;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Miêu tả chính */
+
+.story .story-main-wrapper .story-desc{
+    width: 65%;
+}
+
+.story .story-main-wrapper .story-desc button{
+    position: absolute;
+    right: 0;
+    background-color: var(--lightmode_background);
+    color: black;
+    border: 1px solid #ccc;
+}
+
+.story .story-newest-chapter .header{
+    height: 40px;
+}
+
+.story .story-newest-chapter .header-title{
+    font-size: 16px;
+}
+
+.story .newest-chapter-wrapper{
+}
+
+.story .story-newest-chapter ul{
+    padding-top: 8px;
+}
+
+.story .story-newest-chapter ul li{
+    list-style: none;
+    color: black;
+    padding: 8px;
+}
+
+.story .story-newest-chapter ul li a{
+    color: black;
+    margin-left: 4px;
+}
+
+
+/* Ảnh + nguồn */
+
+.story .story-main-wrapper .story-info .info{
+    margin-right: 16px;
+    border-right: 1px solid #ccc;
+}
+
+.story .story-main-wrapper .story-info>div{
+    padding: 12px 0 12px 12px;
+}
+
+.story .story-main-wrapper .story-info>div h3{
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0;
+}
+
+.story .story-main-wrapper .story-info>div a,
+.story .story-main-wrapper .story-info>div span{
+    color: black;
+    font-size: 12px;
+}
+
