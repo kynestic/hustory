@@ -1,10 +1,14 @@
 :root{
     --darkmode_text: white;
     --lightmode_text: #4E4E4E;
-    --darkmode_background: black;
+    --darkmode_background: #4E4E4E;
     --lightmode_background: #F4F4F4;
     --theme_color: #14425D;
     --hover_color: #2f566d;
+}
+
+html{
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 *{
@@ -274,6 +278,32 @@
 }
 
 
+/* Danh sách các chương truyện */
+
+.story-main .story-chapter-list .chapter-list-wrapper{
+    margin-top: 16px;
+}
+
+.story-main .story-chapter-list .chapter-list-wrapper>ul{
+    width: 48%;
+    display: inline-block;
+}
+
+.story-chapter-list .chapter-list-wrapper>ul li{
+    list-style: none;
+}
+
+.story-chapter-list .chapter-list-wrapper>ul li a{
+    color: black;
+    display: inline-block;
+    padding: 4px;
+}
+
+
+
+
+
+
 /* Ảnh + nguồn */
 
 .story .story-main-wrapper .story-info .info{
@@ -295,6 +325,119 @@
 .story .story-main-wrapper .story-info>div a,
 .story .story-main-wrapper .story-info>div span{
     color: black;
+    font-size: 12px;
+}
+
+/* Truyện cùng tác giả */
+
+.story-side{
+    margin-top: 20px;
+}
+
+.story-side .header{
+    margin: 0;
+}
+
+.story-side .same-author{
+    background-color: white;
+    padding-left: 16px;
+}
+
+.story-side .same-author .same-author-story{
+    margin-top: 16px;
+}
+
+.story-side .same-author .same-author-story li{
+    list-style: none;
+    padding: 8px;
+}
+
+.story-side .same-author .same-author-story li a{
+    color: var(--lightmode_text);
+}
+
+/* Bảng xếp hạng */
+
+.popular-table{
+    border-top: 1px solid #ccc;
+}
+
+.popular-table .popular-table-option{
+    padding: 8px 0;
+}
+
+.popular-table .popular-table-option ul{
+    display: flex;
+    justify-content: center;
+}
+
+.popular-table .popular-table-option ul li{
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.popular-table .popular-table-option ul li a{
+    color: var(--lightmode_text);
+    background-color: #F4F4F4;
+    border: 1px solid #4E4E4E;
+    padding: 8px;
+    margin: 0 4px;
+    text-decoration: none;
+    min-width: 60px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+/* List truyện phổ biến*/
+
+.popular-table-item{
+    padding: 8px 0;
+    border-bottom: 1px dashed #cbcbcb;
+}
+
+.popular-table-item>div{
+    display: inline-block;
+}
+
+.popular-table-item .rank{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    border-radius: 50%;
+    border: #cbcbcb solid 1px;
+    vertical-align: top;
+}
+
+.popular-table-item .table-item-content{
+    margin-left: 8px;
+}
+
+.popular-table-item:first-child .rank{
+    color: #fff;
+    background-color: #e74c3c;
+}
+
+.popular-table-item:nth-last-child(9) .rank{
+    color: #fff;
+    background-color: #5eb949;
+    border-color: #5eb949;
+}
+
+.popular-table-item:nth-last-child(8) .rank{
+    color: #fff;
+    border: #5cabb8 solid 1px;
+    background-color: #5cabb8;
+}
+
+.popular-table-item .table-item-content .table-item-name a{
+    color: #083767;
+}
+
+.popular-table-item .table-item-content .table-item-category a{
+    color: var(--lightmode_text);
     font-size: 12px;
 }
 
